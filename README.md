@@ -15,8 +15,6 @@ A simple and elegant web‑application for a coffee shop built with Python, Flas
 * [Usage](#usage)
 * [Configuration](#configuration)
 * [Database](#database)
-* [Contributing](#contributing)
-* [License](#license)
 * [Contact](#contact)
 
 ## About
@@ -130,8 +128,6 @@ These steps assume you have Python installed (version 3.x).
 The SQLite database `coffee.db` likely contains at least one table (e.g., `coffee_items`, or `menu`) with columns such as `id`, `name`, `description`, `price`, `image_path`, etc.
 You can open the database using SQLite browser to view and edit.
 The `create_db.py` script handles creation of tables and populating initial data (if any).
-
-
 
 ## Contact
 
