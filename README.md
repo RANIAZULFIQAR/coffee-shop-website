@@ -1,7 +1,3 @@
-# coffee-shop-website
-Here’s a comprehensive **README** draft for your repository **coffee‑shop‑website** (by Rania Zulfiqar) on GitHub. You can copy this into your `README.md` and adjust or expand as needed.
-
----
 
 # Coffee Shop Website
 
