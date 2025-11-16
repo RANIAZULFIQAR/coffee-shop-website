@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard - Coffee Shop</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <style>
+    table {
+      width: 80%;
+      margin: 20px auto;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 10px;
+      border: 1px solid #a1887f;
+    }
+    th {
+      background-color: #6d4c41;
+      color: white;
+    }
+    td {
+      background-color: #f1ede7;
+    }
+    h1 {
+      text-align: center;
+      color: #4e342e;
+    }
+  </style>
+</head>
+<body>
+  <h1>☕ Admin Dashboard</h1>
+
+  <h2 style="text-align:center;">Customer Messages</h2>
+  <table>
+    <tr>
+      <th>ID</th><th>Name</th><th>Email</th><th>Message</th>
+    </tr>
+    {% for m in messages %}
+    <tr>
+      <td>{{ m[0] }}</td>
+      <td>{{ m[1] }}</td>
+      <td>{{ m[2] }}</td>
+      <td>{{ m[3] }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  <h2 style="text-align:center;">Orders</h2>
+  <table>
+    <tr>
+      <th>ID</th><th>Name</th><th>Coffee Type</th><th>Quantity</th>
+    </tr>
+    {% for o in orders %}
+    <tr>
+      <td>{{ o[0] }}</td>
+      <td>{{ o[1] }}</td>
+      <td>{{ o[2] }}</td>
+      <td>{{ o[3] }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>

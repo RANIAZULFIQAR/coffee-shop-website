@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu - Coffee Haven</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Coffee Haven Menu</h1>
+    <nav>
+      <a href="{{ url_for('home') }}">Home</a>
+      <a href="{{ url_for('menu') }}" class="active">Menu</a>
+      <a href="{{ url_for('about') }}">About</a>
+      <a href="{{ url_for('contact') }}">Contact</a>
+    </nav>
+  </header>
+
+  <section class="menu-section">
+    <div class="menu-item">
+      <img src="{{ url_for('static', filename='images/espresso.jpg') }}" alt="Espresso">
+      <h2>Espresso</h2>
+      <p>Strong and bold flavor — pure energy in a cup.</p>
+      <a href="{{ url_for('espresso') }}" class="btn">Order Now</a>
+    </div>
+
+    <div class="menu-item">
+      <img src="{{ url_for('static', filename='images/latte.jpg') }}" alt="Latte">
+      <h2>Latte</h2>
+      <p>Silky smooth steamed milk with a shot of espresso.</p>
+      <a href="{{ url_for('latte') }}" class="btn">Order Now</a>
+    </div>
+
+    <div class="menu-item">
+      <img src="{{ url_for('static', filename='images/cappuccino.jpg') }}" alt="Cappuccino">
+      <h2>Cappuccino</h2>
+      <p>Perfect balance of espresso, milk, and froth.</p>
+      <a href="{{ url_for('cappuccino') }}" class="btn">Order Now</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Coffee Haven. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

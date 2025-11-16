@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cappuccino - Coffee Haven</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Coffee Haven ☕</h1>
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+        </nav>
+    </header>
+
+    <section class="coffee-detail">
+        <img src="{{ url_for('static', filename='images/cappuccino.jpg') }}" alt="Cappuccino" class="detail-img">
+        <div class="detail-text">
+            <h2>Cappuccino</h2>
+            <p>A creamy mix of espresso, steamed milk, and frothy foam that gives a balanced taste — both bold and comforting.</p>
+            
+            <form action="{{ url_for('order') }}" method="POST" class="order-form">
+                <input type="hidden" name="coffee_type" value="Cappuccino">
+                <input type="text" name="name" placeholder="Your Name" required class="order-input">
+                <input type="number" name="quantity" placeholder="Quantity (e.g., 1)" value="1" min="1" required class="order-input">
+                <button type="submit" class="order-btn">Place Order</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
